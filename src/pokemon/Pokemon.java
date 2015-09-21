@@ -59,5 +59,21 @@ public class Pokemon extends AbstractPokemon implements Tradeable {
 		}
 		return list;
 	}
+	
+	@Override
+	protected String editName(String name) {
+		String editName = "";
+		switch (name){
+		case "Mr. Mime":
+			editName = "mrmime";
+			break;
+		case "Farfetch'd":
+			editName = "farfetchd";
+			break;
+		default:
+			editName = name.toLowerCase();
+		}
+		return editName;
+	}
 
 }

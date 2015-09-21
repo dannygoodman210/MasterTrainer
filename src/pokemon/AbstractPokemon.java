@@ -15,6 +15,7 @@ public abstract class AbstractPokemon implements Buildable {
 	protected int myAttackPoints;
 	protected int myType;
 	protected List<Integer> myDiceRolls;
+	protected String myImageFilename;
 
 	protected void AssignValues(String name, int type, int number, int powerPoints, int attackPoints, List<Integer> diceRolls){
 		myName = name;
@@ -23,6 +24,13 @@ public abstract class AbstractPokemon implements Buildable {
 		myPowerPoints = powerPoints;
 		myAttackPoints = attackPoints;
 		myDiceRolls = diceRolls;
+		String editName = editName(name);
+		myImageFilename = "src/images/pokemon/"+number+"_"+editName+".png";
+	}
+
+	protected String editName(String name) {
+		String editName = name.toLowerCase();
+		return editName;
 	}
 	
 	@Override
@@ -47,7 +55,7 @@ public abstract class AbstractPokemon implements Buildable {
 				dr = dr + ", " + myDiceRolls.get(i);
 			}
 		}
-		return myName + " #" + myNumber + " : PP = " + myPowerPoints + ", AP = " + myAttackPoints + ", DR = " + dr;
+		return myName + " #" + myNumber + " : PP = " + myPowerPoints + ", AP = " + myAttackPoints + ", DR = " + dr + " " + myImageFilename;
 		
 	}
 	
