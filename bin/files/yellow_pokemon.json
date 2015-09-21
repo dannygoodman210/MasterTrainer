@@ -1,0 +1,5 @@
+[
+{"name":"Articuno","type":5,"number":144,"pp":8,"ap":9,"attack":"Blizzard"},
+{"name":"Zapdos","type":5,"number":145,"pp":8,"ap":9,"attack":"Thunder"},
+{"name":"Moltres","type":5,"number":146,"pp":8,"ap":9,"attack":"Sky Attack"},
+{"name":"Mewtwo","type":5,"number":150,"pp":9,"ap":9,"attack":"Psychic"}]

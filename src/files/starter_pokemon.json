@@ -1,0 +1,7 @@
+[
+{"name":"Bulbasaur","type":0,"number":1,"pp":4,"ap":4,"attack":"Leech Seed"},
+{"name":"Charmander","type":0,"number":4,"pp":4,"ap":4,"attack":"Ember"},
+{"name":"Squirtle","type":0,"number":7,"pp":4,"ap":4,"attack":"Water Gun"},
+{"name":"Pikachu","type":0,"number":25,"pp":3,"ap":3,"attack":"Thundershock"},
+{"name":"Clefairy","type":0,"number":35,"pp":3,"ap":3,"attack":"Pound"},
+{"name":"Meowth","type":0,"number":52,"pp":3,"ap":3,"attack":"Bite"}]

@@ -1,4 +1,4 @@
-"pokemon":[
+[
 {"name":"Bulbasaur","type":0,"number":1,"pp":4,"ap":4,"attack":"Leech Seed"},
 {"name":"Ivysaur","type":3,"number":2,"pp":7,"ap":7,"attack":"Razor Leaf"},
 {"name":"Venusaur","type":4,"number":3,"pp":7,"ap":8,"attack":"Solarbeam"},
@@ -50,7 +50,7 @@
 {"name":"Venomoth","type":3,"number":49,"pp":6,"ap":5,"attack":"Psybeam"},
 {"name":"Diglett","type":1,"number":50,"pp":2,"ap":3,"attack":"Dig"},
 {"name":"Dugtrio","type":2,"number":51,"pp":4,"ap":4,"attack":"Slash"},
-{"name":"Meowth","type":1,"number":52,"pp":3,"ap":3,"attack":"Bite"},
+{"name":"Meowth","type":0,"number":52,"pp":3,"ap":3,"attack":"Bite"},
 {"name":"Ninetails","type":3,"number":53,"pp":7,"ap":6,"attack":"Fury Swipes"},
 {"name":"Psyduck","type":1,"number":54,"pp":3,"ap":2,"attack":"Scratch"},
 {"name":"Golduck","type":3,"number":55,"pp":6,"ap":5,"attack":"Confusion"},
