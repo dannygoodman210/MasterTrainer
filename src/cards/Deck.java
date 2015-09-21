@@ -1,6 +1,7 @@
 package cards;
 
 import java.io.File;
+import org.json.simple.*;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -12,6 +13,7 @@ public class Deck{
 	
 	public Deck(File f){
 		//Parse Text File to create Deck.
+		JSONObject j;
 	}
 	
 	public void shuffle(){
