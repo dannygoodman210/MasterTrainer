@@ -1,11 +1,10 @@
 package pokemon;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.json.simple.JSONObject;
 
-import cards.Buildable;
+import game.Buildable;
 
 public abstract class AbstractPokemon implements Buildable {
 	

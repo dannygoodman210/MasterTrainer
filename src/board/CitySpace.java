@@ -7,6 +7,7 @@ import game.Game;
 public class CitySpace extends Space{
 
 	private String myName;
+	private int myDraw = 2;
 
 	public CitySpace(String name, int number, int type, List<Integer> neighbors) {
 		super(number, type, neighbors);
@@ -15,7 +16,7 @@ public class CitySpace extends Space{
 
 	@Override
 	public void doAction(Game g) {
-		g.DrawItemCard(2);
+		g.DrawItemCard(myDraw);
 	}
 
 }

@@ -8,37 +8,52 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import game.Buildable;
+import game.Builder;
+import pokemon.*;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Stack;
 
-public class Deck<T extends Buildable>{
+public class Deck<T extends Buildable> implements Builder{
 	
-	private List<Buildable> myDeck;
-	private Class<T> myClass;
+	private List<T> myDeck;
 	
-	public Deck(File f, Class<T> elementClass) throws FileNotFoundException, ParseException, InstantiationException, IllegalAccessException{
-		myDeck = new ArrayList<Buildable>();
-		myClass = elementClass;
+	@SuppressWarnings({ "resource", "unchecked" })
+	public Deck(File f) throws FileNotFoundException, ParseException, InstantiationException, IllegalAccessException, ClassNotFoundException{
+		builder(f);
+	}
+	
+	@Override
+	public void builder(File f) throws FileNotFoundException, ParseException, ClassNotFoundException,
+			InstantiationException, IllegalAccessException {
+		myDeck = new ArrayList<T>();
 		String data = new Scanner(f).useDelimiter("//A").next();
 		JSONParser parser = new JSONParser();
 		JSONArray array = (JSONArray) parser.parse(data);
 		JSONObject obj;
-		Buildable element;
+		T element;
 		for(int i = 0; i < array.size(); i++){
 			obj = (JSONObject) array.get(i);
-			element = elementClass.newInstance();
+			Class<T> buildClass = (Class<T>) Class.forName(obj.get("class").toString());
+			element = buildClass.newInstance();
 			element.build(obj);
 			myDeck.add(element);
 		}
-		System.out.println(myDeck);
+	}
+	
+	public String toString(){
+		return myDeck.toString();
 	}
 	
 	public void shuffle(){
 		Collections.shuffle(myDeck);
+	}
+	
+	public T draw(){
+		return myDeck.remove(0);
 	}
 
 }

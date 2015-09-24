@@ -1,17 +1,10 @@
 package cards;
 
-import java.util.Collection;
-
 import game.Tradeable;
 
 public abstract class ItemCard extends Card implements Tradeable{
 	
 	private boolean tradeSelect = false;
-
-	public ItemCard(String name, String Description) {
-		super(name, Description);
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public void select() {
@@ -29,8 +22,4 @@ public abstract class ItemCard extends Card implements Tradeable{
 		// TODO Auto-generated method stub
 		return myName;
 	}
-
-	
-	
-	
 }
